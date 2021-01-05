@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
     res.render('index', { title: "My atristName" })
 })
 
-
 app.get(`/artist-search`, (req, res) => {
     spotifyApi
         .searchArtists(req.query.atristName)
@@ -50,7 +49,6 @@ app.get('/albums/:id', (req, res, next) => {
             console.log(`The error while searching artists occurred: `, err)
         );
 });
-
 
 app.get('/tracks/:id', (req, res, next) => {
     spotifyApi
