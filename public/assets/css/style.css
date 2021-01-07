@@ -19,15 +19,22 @@ nav img{
     width:7vh;
     height:7vh;
     margin-left:5%;
-
 }
+
 nav h1{
     font-size:25px;
     padding-top:1%;
+    padding-left:4%;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding-top: 1.5%;
     padding-left:1%;
 }
 
-a{
+.boxes a{
     color:white;
     background-color:#FF6666;
     padding:3% 5%;
@@ -38,7 +45,7 @@ a{
     border-radius:10px;
 }
 
-a:hover{
+.boxes a:hover{
     border:3px solid #333;
 }
 
@@ -61,7 +68,8 @@ a:hover{
 #TextInput{
     width:100%;
     background-color:rgba(250, 235, 215, 0.349);
-    height:15vh;
+    height:10vh;
+    margin-top: 2%;
 }
 
 [type="submit"]{

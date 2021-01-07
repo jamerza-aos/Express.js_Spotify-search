@@ -20,16 +20,19 @@ spotifyApi
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
     res.render('index', { title: "My atristName" })
 })
 
 app.get(`/artist-search`, (req, res) => {
+    // req hier ist wenn wir was in input schriebn wird das objeckt gezeigt in console(wenn wir console.log(req) schreiben)
+    // und hier unten ist nach der Api suche 
     spotifyApi
         .searchArtists(req.query.atristName)
         .then((data) => {
-            //  console.log( data.body.items);
-            //  console.log(data.body.artists.items);
+            // console.log( data.body.items);
+              console.log(data.body.artists.items);
+            // zeile 36 wo und was von data gespeichert wird 
             res.render(`artist-search-results`, { artistData: data.body.artists.items, title: "My atristName" })
         })
         .catch((err) =>
